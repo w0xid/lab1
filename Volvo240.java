@@ -1,4 +1,4 @@
-import java.awt.*;
+import java.awt.Color;
 
 public class Volvo240 extends CommonBaseCar implements Movable {
 
@@ -9,26 +9,20 @@ public class Volvo240 extends CommonBaseCar implements Movable {
     }
 
     @Override
-    protected double speedFactor() {
-        return getEnginePower() * 0.01 * trimFactor;
-    }
-
-    @Override
     public void move() {
-        double angleInRadians = Math.toRadians(getCurrentDirection());
-        double deltaX = getCurrentSpeed() * Math.cos(angleInRadians);
-        double deltaY = getCurrentSpeed() * Math.sin(angleInRadians);
-        setCurrentX(getCurrentX() + deltaX);
-        setCurrentY(getCurrentY() + deltaY);
+        // Implementera logik för att flytta Volvo240
+        System.out.println("Volvo240 moving");
     }
 
     @Override
     public void turnLeft() {
-        setCurrentDirection((getCurrentDirection() - 90) % 360);
+        // Implementera logik för att svänga vänster
+        System.out.println("Volvo240 turning left");
     }
 
     @Override
     public void turnRight() {
-        setCurrentDirection((getCurrentDirection() + 90) % 360);
+        // Implementera logik för att svänga höger
+        System.out.println("Volvo240 turning right");
     }
 }
