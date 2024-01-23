@@ -1,6 +1,6 @@
-import java.awt.*;
+import java.awt.Color;
 
-public class Saab95 extends CommonBaseCar {
+public class Saab95 extends CommonBaseCar implements Movable {
 
     private boolean turboOn;
 
@@ -10,10 +10,21 @@ public class Saab95 extends CommonBaseCar {
     }
 
     @Override
-    protected double speedFactor() {
-        double turbo = 1;
-        if (turboOn) turbo = 1.3;
-        return getEnginePower() * 0.01 * turbo;
+    public void move() {
+        // Implementera logik för att flytta Saab95
+        System.out.println("Saab95 moving");
+    }
+
+    @Override
+    public void turnLeft() {
+        // Implementera logik för att svänga vänster
+        System.out.println("Saab95 turning left");
+    }
+
+    @Override
+    public void turnRight() {
+        // Implementera logik för att svänga höger
+        System.out.println("Saab95 turning right");
     }
 
     public void setTurboOn() {
